@@ -1,5 +1,6 @@
 import express from 'express';
 import { promises as fs } from 'fs';
+import { StatusCodes } from 'http-status-codes';
 import * as helpers from './helpers.js';
 import axios from 'axios';
 import NodeCache from 'node-cache';
@@ -14,8 +15,11 @@ const myCache = new NodeCache()
 async function getMovies() {
 
     const data = await fs.readFile('./popularMovies.json', 'utf-8');
+    console.log(data);
     const result = JSON.parse(data);
+    console.log(result);
     g_movies = result.popularMovies;
+    console.log(g_movies);
     return result;
 }
 
