@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '/client/build')));
+app.use(express.static(path.join('/client/build')));
 
 app.use(cors());
 
