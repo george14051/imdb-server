@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(express.static(path.join('/client/build')));
+app.use(express.static(path.join(__dirname + '/client/build')));
 
 app.use(cors());
 
@@ -30,11 +30,11 @@ app.get("/api", (req, res) => {
 app.use('/api', router);
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join('/client/build/index.html'));
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join('./client/build/index.html'));
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 app.listen(PORT, () => {
