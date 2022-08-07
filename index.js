@@ -1,4 +1,4 @@
-import { router } from '../routes/router.js'
+import { router } from './routes/router.js'
 import cors from 'cors'
 import express from 'express';
 import bodyParser from 'body-parser';
