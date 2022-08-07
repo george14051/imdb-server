@@ -8,7 +8,7 @@
     "start": "node server/index.js",
     "debug": "nodemon server/index.js",
     "test": "test",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run-script build"
   },
   "author": "George garama",
   "license": "ISC",
