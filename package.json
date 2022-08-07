@@ -7,8 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "debug": "nodemon index.js",
-    "test": "test",
-    "heroku-postbuild": "cd client && npm install && npm run-script build --force"
+    "test": "test"
   },
   "engines": {
     "npm": "8.3.0",

@@ -8,13 +8,13 @@ import { fileURLToPath } from 'url';
 
 const PORT = process.env.PORT || 3001;
 
-const __filename = fileURLToPath(import.meta.url);
+// const __filename = fileURLToPath(import.meta.url);
 
-const __dirname = path.dirname(__filename);
+// const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(express.static(path.join(__dirname + '/client/build')));
+// app.use(express.static(path.join(__dirname + '/client/build')));
 
 app.use(cors());
 
@@ -33,9 +33,9 @@ app.use('/api', router);
 //     res.sendFile(path.join(__dirname + '/client/build/index.html'));
 // });
 
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
+// app.get('/*', (req, res) => {
+//     res.sendFile(path.join(__dirname + '/client/build/index.html'));
+// });
 
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
