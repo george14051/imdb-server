@@ -1,6 +1,5 @@
 import express from 'express';
 import { promises as fs } from 'fs';
-import { StatusCodes } from 'http-status-codes';
 import * as helpers from './helpers.js';
 import axios from 'axios';
 import NodeCache from 'node-cache';
